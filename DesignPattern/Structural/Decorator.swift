@@ -97,3 +97,53 @@ class RoadDisplayWithLane: RoadDisplay {
 	}
 }
 
+/*
+이체 인증이라는 프로세스.. (기본: 계좌비밀번호 +로그인수단 + otp )
+
+
+Protocol 인증 {
+	func 인증한다
+}
+
+
+Class 기본인증: 인증 {
+	func 인증한다 {
+		계좌비밀번호인증
+	}
+}
+
+얹는애.
+Class 인증Decorator: 인증 {
+	var 인증객체: 인증
+
+	required init (인증객체: 인증) {
+		self.인증객체 = 인증객체
+	}
+
+	func 인증한다 {
+		인증객체.인증한다()
+	}
+}
+
+
+Class 로그인수단인증Decorator: 인증Decorator {
+
+	required init (인증객체: 인증) {
+		super.init()
+	}
+
+	override func 인증한다 {
+		super.인증한다()
+		로그인수단인증
+	}
+}
+
+
+실제사용
+
+Let 기본인증 = 기본인증()
+Let 기본인증+로그인수단인증 = 로그인수단인증Decorator(인증객체: 기본인증)
+Let 기본인증+otp인증 = otp인증Decorator(인증객체: 기본인증)
+Let 기본인증+로그인수단인증+otp인증 =.
+
+*/
