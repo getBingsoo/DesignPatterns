@@ -15,6 +15,7 @@
 		8D49A22A2642753900E148AB /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D49A2292642753900E148AB /* Facade.swift */; };
 		8D49A22D2642754200E148AB /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D49A22C2642754200E148AB /* Observer.swift */; };
 		8D7F81122644ED32004AE597 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7F81112644ED32004AE597 /* Coordinator.swift */; };
+		8DCDD6E62648AF8300BE1DDF /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDD6E52648AF8300BE1DDF /* Command.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		8D49A2292642753900E148AB /* Facade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
 		8D49A22C2642754200E148AB /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		8D7F81112644ED32004AE597 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8DCDD6E52648AF8300BE1DDF /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				8D49A22C2642754200E148AB /* Observer.swift */,
 				8D7F81112644ED32004AE597 /* Coordinator.swift */,
+				8DCDD6E52648AF8300BE1DDF /* Command.swift */,
 			);
 			path = Behavior;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				8D49A2242642750400E148AB /* Decorator.swift in Sources */,
 				8D49A21E264274EF00E148AB /* Singleton.swift in Sources */,
 				8D49A22A2642753900E148AB /* Facade.swift in Sources */,
+				8DCDD6E62648AF8300BE1DDF /* Command.swift in Sources */,
 				8D49A2272642752800E148AB /* Adapter.swift in Sources */,
 				8D49A22D2642754200E148AB /* Observer.swift in Sources */,
 				8D49A221264274F700E148AB /* Factory.swift in Sources */,

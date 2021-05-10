@@ -43,6 +43,7 @@ class MainCoordinator: Coordinator {
 		self.navigationController = navigateController
 	}
 
+	// 앱의 시작화면을 정해주는..
 	func start() {
 		let vc = BaseViewController()
 		vc.coordinator = self
@@ -65,8 +66,44 @@ class FirstViewController: BaseViewController {
 
 	/// 버튼을 눌렀다고 가정하고 vc를 이동하자.
 	func touchSomething() {
-		// coordinator을 통해 화면 전환
+		// 방법 1: coordinator을 가지고 있고 이걸 통해 화면 전환
 		coordinator?.moveFirstVC()
 	}
 }
 
+// 방법 2: protocol을 호출하고 coordinator에서는 protocol을 구현
+protocol SecondViewControllerDelegate {
+
+	func touchSomething()
+}
+
+class SecondViewController: UIViewController {
+
+	var delegate: SecondViewControllerDelegate?
+
+	func touchSomething() {
+		delegate?.touchSomething()
+	}
+}
+
+class SecondCoordinator: Coordinator, SecondViewControllerDelegate {
+
+	var childCoordinators: [Coordinator] = []
+
+	var navigationController: UINavigateController
+
+	init(navigationController: UINavigateController) {
+		self.navigationController = navigationController
+	}
+
+	func start() {
+		let vc = SecondViewController()
+		vc.delegate = self
+		self.navigationController.pushViewController(vc)
+	}
+
+	func touchSomething() {
+		// do something
+	}
+
+}
